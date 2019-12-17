@@ -36,9 +36,9 @@ public final class FMLEventHandler {
                     System.out.println("ERROR " + e.getMessage());
                 }
 
-                if (Minecraft.getMinecraft().gameSettings.gammaSetting > 0.5F) {
-                    Minecraft.getMinecraft().gameSettings.gammaSetting = 0.5F;
-                    Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("[OptiFine] Не разрешено значение яркости выше 50%. Яркость была изменена на 50%."));
+                if (Minecraft.getMinecraft().gameSettings.gammaSetting > 1.0F) {
+                    Minecraft.getMinecraft().gameSettings.gammaSetting = 1.0F;
+                    Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("[OptiFine] Не разрешено значение яркости выше 100%. Яркость была изменена на 100%."));
                 }
             }
         }
