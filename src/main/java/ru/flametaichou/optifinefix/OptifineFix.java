@@ -2,8 +2,6 @@ package ru.flametaichou.optifinefix;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -13,8 +11,8 @@ public final class OptifineFix {
 
     public final static String ID = "optifinefix";
 
-    @EventHandler
+    @Mod.EventHandler
     public void load(FMLPreInitializationEvent event) {
-        FMLCommonHandler.instance().bus().register(FMLEventHandler.INSTANCE);
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
     }
 }
